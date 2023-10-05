@@ -1,0 +1,382 @@
+ html {
+    --s: 50px;
+    --c: #191b22;
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #0000 66%,#20222a 68% 70%,#0000 72%;
+    background: 
+      radial-gradient(var(--_g) 100% 25%,var(--_c)) var(--s) var(--s)/var(--_s), 
+      radial-gradient(var(--_g) 0 75%,var(--_c)) var(--s) var(--s)/var(--_s), 
+      radial-gradient(var(--_g) 100% 25%,var(--_c)) 0 0/var(--_s), 
+      radial-gradient(var(--_g) 0 75%,var(--_c)) 0 0/var(--_s), 
+      repeating-conic-gradient(var(--c) 0 25%,#0000 0 50%) 0 0/var(--_s), 
+      radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+    background-attachment: fixed;
+  }
+
+/*body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(102, 101, 107) 3%, rgb(28, 31, 47) 38%, rgb(19, 10, 35) 68%,
+     rgb(26, 20, 36) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+  
+  /* This is just to transition when you change the viewport size. */
+  {
+    transition: all 0.25s ease-out;
+  }
+
+*/
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Josefin Sans', Lucida Sans', 'Lucida Sans Regular', 
+    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    /*background: rgba(0, 0, 0, 0.235);*/
+        }
+
+.hero{
+    height:200px;
+    width:100%;
+    background-size:cover;
+    background-image: none;
+    background-position: center;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right:10%;
+}
+.logo{
+color:rgb(240, 233, 233);
+font-size: 30px;
+cursor: pointer;
+}
+span{
+    color:rgba(244, 7, 38, 0.906);
+}
+nav ul li {
+    padding:10px 25px;
+    list-style: none;
+    display:inline-block;
+}
+nav ul li a{
+    color:white;
+    font-weight: bold;
+    text-decoration: wavy;
+    text-transform: capitalize;
+}
+nav ul li a:hover{
+    color:crimson;
+    transition: .4s;
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    margin-top:-50px;
+}
+img{
+    float:right;
+    margin-left:700px;
+    margin-top:-300px;
+    border-radius: 50px;
+}
+h1{
+    color:white;
+    margin:20px 25px ;
+    font-size:75px;
+}
+h3{
+    color:white;
+    margin:10px 10px;
+    font-size:40px;
+}
+h4{
+    color:white;
+    letter-spacing: 2px;
+    font-size:20px;
+}
+.letter{
+width:380px;
+max-width:100%;
+position:absolute;
+}
+.letter form input:first-child{
+    display:inline-block;
+    width:90%;
+    padding:10px 20px 10px 15px;
+    border: 3px solid #f90040;
+    outline:none;
+    border-radius: 25px;
+    margin-top:10px;
+}
+.letter form input:last-child{
+    position:absolute;
+    display:inline-block;
+    border: none;
+    outline:none;
+    border-radius: 25px;
+    padding:8px 8px;
+    border-radius: 30px;
+    background-color: #e62757;
+    color:black;
+    font-size: 14px;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    top:4px;
+    right:-7px;
+    font:italic;   
+    margin:10px;
+}
+.about{
+    width:100%;
+    padding:100px 800px;
+    background: color #191919;
+}
+.about img{
+    height:auto;
+    width:430px;
+    float:bottom;
+    object-fit:cover;
+}
+.about-text{
+    width:550px;
+}
+.main{
+    width:1130px;
+    max-width:105%;
+    margin-top: 580px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    position:absolute;
+}
+.about-text h2{
+    color:white;
+    font-size:50px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    margin-left:150px;
+}
+.about-text h5{
+    color:white;
+    font-size:20px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    margin-left:240px;
+}
+p{
+    font-size:20px;
+    color:white;
+}
+.about-text button{
+    width:50x;
+    height:40px;
+}
+button{
+    background-color:#f90040;
+    color:white;
+    border: 2px solid transparent;
+    padding:13px 30px;
+    font-weight:bold;
+    border-radius:30px;
+    margin-left:230px;
+    transition: .4s;
+}
+button:hover{
+    background-color:transparent;
+    border:2px solid;
+
+}
+.title{
+    width:200px;
+    
+    color:white;
+
+}
+.title h4{
+    color:white;
+    margin-left: 56px;
+    padding:500px;
+    margin-top:710px;
+    font-size: 30px;
+}
+.box{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100px;
+    color:white;
+    font-style: italic;
+    margin-top: -490px;
+    padding-left:100px;
+    font:bold;
+}
+.title h5{
+    border-radius:40px;
+}
+.title p{
+    margin-left:550px;
+}
+.box h5{
+    width:160px;
+    border:1px solid rgb(181, 33, 72);
+    padding:10px 20px 10px 40px;
+    height:420px;
+    font-size:large;
+    border-radius:30px;
+    position:relative;
+    font:bold;
+}
+.box ul{
+    width:200px;
+    margin-left:-20px; 
+    margin-top: 20px;
+    color:rgb(15, 15, 15);
+
+}
+.box li p{
+    width:200px;
+    margin-left:10px; 
+    margin-top: 15px;
+    color:rgb(16, 15, 15);
+
+}
+.box h5:hover{
+    background-color:rgb(231, 225, 225);
+    color:rgb(18, 17, 17);
+}
+.box li{
+    width:200px;
+    margin-left:-40px; 
+    margin-top: 20px;
+    color:rgb(15, 15, 15);
+
+}
+.Contact{
+    width:25%;
+    height:150px;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content: center;
+    margin-top: 80px;
+    margin-left: 480px;
+    padding:-30px 0px -30px 0px;
+
+}
+button{
+    width:110px;
+    height:80px;
+    margin-right: 250px;
+    border: none;
+    outline:none;
+    border-radius: 25px;
+    padding:5px 5px;
+    border-radius: 30px;
+    color:black;
+    font-size: 14px;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    transition: .4s;
+    
+
+}
+.Contact p{
+    font-size:30px;
+    font-weight:bold;
+    color:#f4eeee;
+}
+.Contact .Button_two{
+    text-decoration: none;
+    border-radius:1px;
+    width:300px;
+    height:200px;
+    
+
+}
+.Button_two{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:20px;
+  
+}
